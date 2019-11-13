@@ -1,0 +1,211 @@
+@import 'global.less';
+html,body,#app{
+  width: 100%;
+  height: 100%;
+}
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  background: #f5f7f8;
+}
+li {
+  display: inline-block;
+  padding: 0 10px;
+}
+a {
+  background: transparent;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  color: #0088cc;
+}
+
+a:active {
+  outline: 0;
+}
+
+a:active {
+  color: #006699;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0px;
+  font-family: '微软雅黑' !important;
+}
+img {
+  border: none;
+  display: block;
+}
+// 通用样式
+.clear-fix:after{
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.fl{float: left;}
+.fr{float:right}
+.pwd-form-item{
+  .el-input__suffix{right:30px;}
+  .el-input__inner{padding-right:54px}
+}
+.pwd-eye{position: absolute;right:0;top:0;font-size:14px;padding:0 10px;cursor: pointer;color:#ADB8C5;}
+
+
+// 确定按钮
+.c-confirm{
+  width:80px;
+  height:32px;
+  background: #00B8DA;
+  border-radius:4px;
+  line-height:32px;
+  text-align:center;
+  color:#fff;
+  font-size: 14px;
+  cursor:pointer;
+  float:left;
+  margin-right: 16px;
+}
+.c-confirm:hover{
+  background: #009FBC;
+}
+.c-confirm:active{
+  background: #00849C;
+}
+//取消按钮
+.c-cancle{
+  float:left;
+  width:80px;
+  height:32px;
+  background: #fff;
+  border-radius:4px;
+  line-height:32px;
+  text-align:center;
+  color:#585858;
+  font-size: 14px;
+  border: 1px solid #D9D9D9;
+  cursor:pointer;
+}
+.c-cancle:hover{
+  background:#F6F8F9
+}
+.c-cancle:active{
+  background: #D9D9D9;
+}
+// 搜索框样式
+input {
+  width: 230px;
+  height: 32px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #D9D9D9;
+  padding-left:12px;
+  color:#262626;
+  font-size:14px;
+}
+::-webkit-input-placeholder {
+  font-family: "MicrosoftYaHeiUI";
+  font-size: 14px;
+  color: #BEBEBE;
+  letter-spacing: 0;
+  font-weight: 100;
+  line-height: 22px;
+}
+textarea::-webkit-input-placeholder {
+  font-family: "MicrosoftYaHeiUI";
+  font-size: 14px;
+  color: #BEBEBE;
+  letter-spacing: 0;
+  font-weight: 100;
+  line-height:24px;
+}
+input:hover{
+  border: 1px solid #00B8DA;
+}
+input:focus {
+  border: 1px solid #00B8DA;
+}
+input:active {
+  border: 1px solid #00B8DA;
+}
+textarea{
+  outline: none;
+  resize:none;
+  font-size:14px;
+  line-height:22px;    
+}
+textarea:hover{
+  border: 1px solid #00B8DA;
+}
+textarea:focus{
+  border: 1px solid #00B8DA;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+textarea:active{
+  border: 1px solid #00B8DA;
+}
+// 滚动条样式
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 4px;
+  transform: rotate(90deg);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 100px;
+}
+//下拉框
+@c-select-li-height:32px;
+.c-select-ul{
+  width:100%;
+  max-height:calc(@c-select-li-height*3);
+  overflow:auto;
+  background:#fff;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.20);
+  position:absolute;
+  left:0;
+  top:32px;
+  z-index:10;
+}
+.c-select-li{
+  width:100%;
+  height:@c-select-li-height;
+  cursor:pointer;
+  font-size: 14px;
+  color: #262626;
+  line-height:@c-select-li-height;
+  padding-left:12px;
+  background:#fff;
+}
+.c-select-li:hover{
+  background: #F6F8F9;
+}
+//搜索框
+.search{
+  position:relative;
+  width:230px;
+  height:32px;
+  input{
+      padding-right:47px;
+  }
+  span{
+      position:absolute;
+      top:10px;
+      cursor:pointer;
+      color:rgba(0, 0, 0, 0.25);
+      &:first-of-type{
+          right:28px;
+      }
+      &:last-of-type{
+          right:10px;
+      }
+  }
+}
